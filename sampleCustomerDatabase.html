@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html class="text-center" lang="en" style="/*background: url(&quot;assets/img/vlcsnap-2021-09-04-20h00m06s638.png&quot;), #ffffff;*/">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>calvinPerryCoding</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/Animated-rainbow-shadow.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body style="/*background: rgba(255,255,255,0);*/">
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark">
+        <div class="container-fluid"><a class="navbar-brand" data-bss-hover-animate="rubberBand" href="index.html" style="background: rgba(150,150,150,0);">home</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="rubberBand" href="githubProjects.html" style="background: rgba(150,150,150,0);">github projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="rubberBand" href="sampleCustomerDatabase.html" style="background: rgba(150,150,150,0);border-color: #ffffff;">Sample Customer Database<br></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 class="text-center" style="background: rgba(16,31,159,0);">Sample Customer Database</h1>
+    <section class="features-boxed"></section><div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+* {
+  box-sizing: border-box;
+}
+    
+/* Search box looks */
+#firstNameInput 
+{
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+    
+/* Search box looks */
+#lastNameInput
+{
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+/* Search box looks */
+#bloodTypeInput
+{
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable 
+{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+/* highlight */
+tr:hover {background-color: yellow;}
+
+/* Blue Header */
+th 
+{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0036ff;
+  color: white;
+}
+    
+{
+  background-color: #04AA6D;
+  color: white;
+}   
+    
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr 
+{
+  border-bottom: 1px solid #ddd;
+}
+
+
+</style>
+</head>
+<body>
+
+<h2>Sample Customers</h2>
+<p>All data used came from this website: https://www.fakenamegenerator.com/ 
+<br><br>For your company, this data can be encrypted, so that only you can view it.</p>
+<!--First Name Search Box-->
+<input type="text" id="firstNameInput" onkeyup="firstNameFunction()" placeholder="Search By First Name" title="Type in a first name">
+<!--Last Name Search Box-->    
+<input type="text" id="lastNameInput" onkeyup="lastNameFunction()" placeholder="Search By Last Name" title="Type in a last name">
+<!--Blood Type Search Box-->    
+<input type="text" id="bloodTypeInput" onkeyup="bloodTypeFunction()" placeholder="Search By Blood Type" title="Type in a Blood Type">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:10%;">ID</th>
+    <th style="width:5%;">First Name</th>
+    <th style="width:5%;">Last Name</th>
+    <th style="width:10%;">Address</th>
+    <th style="width:5%;">Phone</th>
+    <th style="width:10%;">DOB</th>
+    <th style="width:5%;">Username</th>
+    <th style="width:5%;">Password</th>
+    <th style="width:10%;">Company</th>
+    <th style="width:10%;">Occupation</th>
+    <th style="width:10%;">Height</th>
+    <th style="width:10%;">Weight</th>
+    <th style="width:1%;">Blood Type</th>
+  </tr>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000001</TD>
+<TD DIR=LTR ALIGN=LEFT>Mary</TD>
+<TD DIR=LTR ALIGN=LEFT>Stewart</TD>
+<TD DIR=LTR ALIGN=LEFT>2086 Ersel Street Dallas, TX 75212</TD>
+<TD DIR=LTR ALIGN=LEFT>214-384-5402</TD>
+<TD DIR=LTR ALIGN=LEFT>July 14, 1954</TD>
+<TD DIR=LTR ALIGN=LEFT>Goder1954</TD>
+<TD DIR=LTR ALIGN=LEFT>zaquoh3Iew</TD>
+<TD DIR=LTR ALIGN=LEFT>Bugle Boy</TD>
+<TD DIR=LTR ALIGN=LEFT>Medical doctor</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 2&quot; (158 centimeters)&#13;&#10;<BR>5' 2&quot; (158 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>158.0 pounds (71.8 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000002</TD>
+<TD DIR=LTR ALIGN=LEFT>Thomas</TD>
+<TD DIR=LTR ALIGN=LEFT>White</TD>
+<TD DIR=LTR ALIGN=LEFT>2105 Conaway Street St Meinrad, IN 47577</TD>
+<TD DIR=LTR ALIGN=LEFT>812-357-4161</TD>
+<TD DIR=LTR ALIGN=LEFT>August 6, 1980</TD>
+<TD DIR=LTR ALIGN=LEFT>Tharne</TD>
+<TD DIR=LTR ALIGN=LEFT>oiJ2iiqu7E</TD>
+<TD DIR=LTR ALIGN=LEFT>Chandler's</TD>
+<TD DIR=LTR ALIGN=LEFT>Restaurant chef</TD>
+<TD DIR=LTR ALIGN=LEFT>6' 1&quot; (185 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>218.7 pounds (99.4 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000003</TD>
+<TD DIR=LTR ALIGN=LEFT>Ashley</TD>
+<TD DIR=LTR ALIGN=LEFT>Felder</TD>
+<TD DIR=LTR ALIGN=LEFT>240 Martha Ellen Drive Lee Jiggs, NV 89829</TD>
+<TD DIR=LTR ALIGN=LEFT>775-744-4956</TD>
+<TD DIR=LTR ALIGN=LEFT>June 15, 1975</TD>
+<TD DIR=LTR ALIGN=LEFT>Alaid1975</TD>
+<TD DIR=LTR ALIGN=LEFT>jaecaiH4ae</TD>
+<TD DIR=LTR ALIGN=LEFT>STM Auto Parts</TD>
+<TD DIR=LTR ALIGN=LEFT>Registrar</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 1&quot; (154 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>111.3 pounds (50.6 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>B+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000004</TD>
+<TD DIR=LTR ALIGN=LEFT>Douglass</TD>
+<TD DIR=LTR ALIGN=LEFT>Brown</TD>
+<TD DIR=LTR ALIGN=LEFT>1641 Joanne Lane Woburn, MA 01801</TD>
+<TD DIR=LTR ALIGN=LEFT>978-476-6842</TD>
+<TD DIR=LTR ALIGN=LEFT>December 15, 1971</TD>
+<TD DIR=LTR ALIGN=LEFT>Lairy1971</TD>
+<TD DIR=LTR ALIGN=LEFT>Ea3KooW6woph</TD>
+<TD DIR=LTR ALIGN=LEFT>Naturohair</TD>
+<TD DIR=LTR ALIGN=LEFT>Farm product inspector</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 7&quot; (169 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>199.1 pounds (90.5 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>AB-</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000005</TD>
+<TD DIR=LTR ALIGN=LEFT>John</TD>
+<TD DIR=LTR ALIGN=LEFT>Echols</TD>
+<TD DIR=LTR ALIGN=LEFT>1977 Scenicview Drive Athens, TX 75751</TD>
+<TD DIR=LTR ALIGN=LEFT>430-979-7710</TD>
+<TD DIR=LTR ALIGN=LEFT>April 16, 1973</TD>
+<TD DIR=LTR ALIGN=LEFT>Whoper</TD>
+<TD DIR=LTR ALIGN=LEFT>leehaSua9ph</TD>
+<TD DIR=LTR ALIGN=LEFT>Enviro Architectural Designs</TD>
+<TD DIR=LTR ALIGN=LEFT>Rental clerk</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 10&quot; (178 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>203.9 pounds (92.7 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>B+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000006</TD>
+<TD DIR=LTR ALIGN=LEFT>Rachel</TD>
+<TD DIR=LTR ALIGN=LEFT>Voegele</TD>
+<TD DIR=LTR ALIGN=LEFT>277 Pike Street San Diego, CA 92103</TD>
+<TD DIR=LTR ALIGN=LEFT>858-583-5735</TD>
+<TD DIR=LTR ALIGN=LEFT>August 3, 1977</TD>
+<TD DIR=LTR ALIGN=LEFT>Alaust</TD>
+<TD DIR=LTR ALIGN=LEFT>naY6nah2Z</TD>
+<TD DIR=LTR ALIGN=LEFT>Naturohair</TD>
+<TD DIR=LTR ALIGN=LEFT>Proofreader</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 7&quot; (170 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>198.0 pounds (90.0 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000007</TD>
+<TD DIR=LTR ALIGN=LEFT>Fred</TD>
+<TD DIR=LTR ALIGN=LEFT>Robinson</TD>
+<TD DIR=LTR ALIGN=LEFT>3426 Frosty Lane Afton, NY 13730</TD>
+<TD DIR=LTR ALIGN=LEFT>607-639-8838</TD>
+<TD DIR=LTR ALIGN=LEFT>May 23, 1974</TD>
+<TD DIR=LTR ALIGN=LEFT>Whouners</TD>
+<TD DIR=LTR ALIGN=LEFT>pauneeNaa2ae</TD>
+<TD DIR=LTR ALIGN=LEFT>A Plus Lawn Care</TD>
+<TD DIR=LTR ALIGN=LEFT>Line cook</TD>
+<TD DIR=LTR ALIGN=LEFT>6' 1&quot; (186 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>226.4 pounds (102.9 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>A-</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000008</TD>
+<TD DIR=LTR ALIGN=LEFT>Joyce</TD>
+<TD DIR=LTR ALIGN=LEFT>Robinson</TD>
+<TD DIR=LTR ALIGN=LEFT>810 Modoc Alley Boise, ID 83702</TD>
+<TD DIR=LTR ALIGN=LEFT>208-891-5360</TD>
+<TD DIR=LTR ALIGN=LEFT>May 28, 1979</TD>
+<TD DIR=LTR ALIGN=LEFT>Nalk1979</TD>
+<TD DIR=LTR ALIGN=LEFT>ebie3TaiSh</TD>
+<TD DIR=LTR ALIGN=LEFT>Standard Food</TD>
+<TD DIR=LTR ALIGN=LEFT>Community dietitian</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 7&quot; (170 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>191.2 pounds (86.9 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000009</TD>
+<TD DIR=LTR ALIGN=LEFT>Sandra</TD>
+<TD DIR=LTR ALIGN=LEFT>Fitch</TD>
+<TD DIR=LTR ALIGN=LEFT>2698 Meadow Lane Oakland, CA 94612</TD>
+<TD DIR=LTR ALIGN=LEFT>707-324-0409</TD>
+<TD DIR=LTR ALIGN=LEFT>July 25, 1950</TD>
+<TD DIR=LTR ALIGN=LEFT>Chumake</TD>
+<TD DIR=LTR ALIGN=LEFT>Ook6cheiF</TD>
+<TD DIR=LTR ALIGN=LEFT>Price Club</TD>
+<TD DIR=LTR ALIGN=LEFT>Two-stroke engine mechanic</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 2&quot; (157 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>195.8 pounds (89.0 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000010</TD>
+<TD DIR=LTR ALIGN=LEFT>Marcia</TD>
+<TD DIR=LTR ALIGN=LEFT>Fletcher</TD>
+<TD DIR=LTR ALIGN=LEFT>3331 Cost Avenue Bowie, MD 20720</TD>
+<TD DIR=LTR ALIGN=LEFT>301-464-5775</TD>
+<TD DIR=LTR ALIGN=LEFT>November 23, 1951</TD>
+<TD DIR=LTR ALIGN=LEFT>Thoonions51</TD>
+<TD DIR=LTR ALIGN=LEFT>egohshe3On</TD>
+<TD DIR=LTR ALIGN=LEFT>Good Guys</TD>
+<TD DIR=LTR ALIGN=LEFT>Graduate teaching assistant</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 7&quot; (171 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>158.4 pounds (72.0 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000011</TD>
+<TD DIR=LTR ALIGN=LEFT>Mary</TD>
+<TD DIR=LTR ALIGN=LEFT>Bonner</TD>
+<TD DIR=LTR ALIGN=LEFT>2874 Jim Rosa Lane San Francisco, CA 94122</TD>
+<TD DIR=LTR ALIGN=LEFT>415-753-4723</TD>
+<TD DIR=LTR ALIGN=LEFT>February 8, 1986</TD>
+<TD DIR=LTR ALIGN=LEFT>Truld1986</TD>
+<TD DIR=LTR ALIGN=LEFT>Juo5ahneef</TD>
+<TD DIR=LTR ALIGN=LEFT>Pro-Care Garden Maintenance</TD>
+<TD DIR=LTR ALIGN=LEFT>Semiconductor assembler</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 5&quot; (165 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>131.6 pounds (59.8 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000012</TD>
+<TD DIR=LTR ALIGN=LEFT>Carlton</TD>
+<TD DIR=LTR ALIGN=LEFT>Vaughan</TD>
+<TD DIR=LTR ALIGN=LEFT>1566 Shinn Avenue Gibsonia, PA 15044</TD>
+<TD DIR=LTR ALIGN=LEFT>724-502-3642</TD>
+<TD DIR=LTR ALIGN=LEFT>April 24, 1962</TD>
+<TD DIR=LTR ALIGN=LEFT>Camle1962</TD>
+<TD DIR=LTR ALIGN=LEFT>booKies1zoo</TD>
+<TD DIR=LTR ALIGN=LEFT>Buckeye Furniture</TD>
+<TD DIR=LTR ALIGN=LEFT>Securities, commodities, and financial services sales agent</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 6&quot; (168 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>151.8 pounds (69.0 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000013</TD>
+<TD DIR=LTR ALIGN=LEFT>Ashley</TD>
+<TD DIR=LTR ALIGN=LEFT>Foley</TD>
+<TD DIR=LTR ALIGN=LEFT>1832 Giraffe Hill Drive Frisco, TX 75034</TD>
+<TD DIR=LTR ALIGN=LEFT>972-300-5820</TD>
+<TD DIR=LTR ALIGN=LEFT>December 23, 1953</TD>
+<TD DIR=LTR ALIGN=LEFT>Othem1953</TD>
+<TD DIR=LTR ALIGN=LEFT>eel1AePohk</TD>
+<TD DIR=LTR ALIGN=LEFT>Netcom Business Services</TD>
+<TD DIR=LTR ALIGN=LEFT>Transfer clerk</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 2&quot; (157 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>213.6 pounds (97.1 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000014</TD>
+<TD DIR=LTR ALIGN=LEFT>Rhonda</TD>
+<TD DIR=LTR ALIGN=LEFT>Shelton</TD>
+<TD DIR=LTR ALIGN=LEFT>4448 Logan Lane Lakewood, CO 80214</TD>
+<TD DIR=LTR ALIGN=LEFT>303-233-7377</TD>
+<TD DIR=LTR ALIGN=LEFT>February 8, 1999</TD>
+<TD DIR=LTR ALIGN=LEFT>Houllich</TD>
+<TD DIR=LTR ALIGN=LEFT>Yeiti0Eodie</TD>
+<TD DIR=LTR ALIGN=LEFT>Edge Yard Service</TD>
+<TD DIR=LTR ALIGN=LEFT>Support specialist</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 7&quot; (171 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>118.8 pounds (54.0 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000015</TD>
+<TD DIR=LTR ALIGN=LEFT>Barbara</TD>
+<TD DIR=LTR ALIGN=LEFT>Esser</TD>
+<TD DIR=LTR ALIGN=LEFT>3694 Spruce Drive Irwin, PA 15642</TD>
+<TD DIR=LTR ALIGN=LEFT>724-864-7866</TD>
+<TD DIR=LTR ALIGN=LEFT>December 24, 1939</TD>
+<TD DIR=LTR ALIGN=LEFT>Hoot1939</TD>
+<TD DIR=LTR ALIGN=LEFT>dei0wai8E</TD>
+<TD DIR=LTR ALIGN=LEFT>Great American Music</TD>
+<TD DIR=LTR ALIGN=LEFT>Fitness director</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 5&quot; (166 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>205.5 pounds (93.4 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>A-</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000016</TD>
+<TD DIR=LTR ALIGN=LEFT>Justin</TD>
+<TD DIR=LTR ALIGN=LEFT>Scott</TD>
+<TD DIR=LTR ALIGN=LEFT>2118 McKinley Avenue Denver, CO 80014</TD>
+<TD DIR=LTR ALIGN=LEFT>303-752-0196</TD>
+<TD DIR=LTR ALIGN=LEFT>July 19, 1951</TD>
+<TD DIR=LTR ALIGN=LEFT>Willeampere</TD>
+<TD DIR=LTR ALIGN=LEFT>iy2quaeGh</TD>
+<TD DIR=LTR ALIGN=LEFT>Morrie Mages</TD>
+<TD DIR=LTR ALIGN=LEFT>Photojournalist</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 11&quot; (180 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>229.9 pounds (104.5 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>A+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000017</TD>
+<TD DIR=LTR ALIGN=LEFT>Travis</TD>
+<TD DIR=LTR ALIGN=LEFT>Edwards</TD>
+<TD DIR=LTR ALIGN=LEFT>858 Derek Drive Youngstown, OH 44506</TD>
+<TD DIR=LTR ALIGN=LEFT>330-423-4927</TD>
+<TD DIR=LTR ALIGN=LEFT>September 9, 1963</TD>
+<TD DIR=LTR ALIGN=LEFT>Onated</TD>
+<TD DIR=LTR ALIGN=LEFT>SooT0Taiz</TD>
+<TD DIR=LTR ALIGN=LEFT>System Star Solutions</TD>
+<TD DIR=LTR ALIGN=LEFT>Motel desk clerk</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 10&quot; (177 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>217.6 pounds (98.9 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000018</TD>
+<TD DIR=LTR ALIGN=LEFT>Emma</TD>
+<TD DIR=LTR ALIGN=LEFT>Logan</TD>
+<TD DIR=LTR ALIGN=LEFT>1318 Florence Street Longview, TX 75601</TD>
+<TD DIR=LTR ALIGN=LEFT>903-503-8315</TD>
+<TD DIR=LTR ALIGN=LEFT>October 1, 1963</TD>
+<TD DIR=LTR ALIGN=LEFT>Loctionly63</TD>
+<TD DIR=LTR ALIGN=LEFT>Xiey6kaiZah</TD>
+<TD DIR=LTR ALIGN=LEFT>Asian Fusion</TD>
+<TD DIR=LTR ALIGN=LEFT>Kennel attendant</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 0&quot; (152 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>183.0 pounds (83.2 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>B+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000019</TD>
+<TD DIR=LTR ALIGN=LEFT>John</TD>
+<TD DIR=LTR ALIGN=LEFT>Rosenthal</TD>
+<TD DIR=LTR ALIGN=LEFT>148 Turnpike Drive Wadley, AL 36276</TD>
+<TD DIR=LTR ALIGN=LEFT>256-395-8881</TD>
+<TD DIR=LTR ALIGN=LEFT>August 13, 1972</TD>
+<TD DIR=LTR ALIGN=LEFT>Threatin</TD>
+<TD DIR=LTR ALIGN=LEFT>eoPh6aek1</TD>
+<TD DIR=LTR ALIGN=LEFT>Happy Bear Investment</TD>
+<TD DIR=LTR ALIGN=LEFT>Fiscal and policy analyst</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 7&quot; (171 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>200.6 pounds (91.2 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>O+</TD>
+</TR>
+<TR>
+<TD DIR=LTR ALIGN=LEFT>0000000020</TD>
+<TD DIR=LTR ALIGN=LEFT>Scott</TD>
+<TD DIR=LTR ALIGN=LEFT>Woods</TD>
+<TD DIR=LTR ALIGN=LEFT>1173 Clement Street Atlanta, GA 30303</TD>
+<TD DIR=LTR ALIGN=LEFT>404-475-0049</TD>
+<TD DIR=LTR ALIGN=LEFT>November 18, 2001</TD>
+<TD DIR=LTR ALIGN=LEFT>Shought</TD>
+<TD DIR=LTR ALIGN=LEFT>Ageorun9</TD>
+<TD DIR=LTR ALIGN=LEFT>Circuit City</TD>
+<TD DIR=LTR ALIGN=LEFT>Floor sander</TD>
+<TD DIR=LTR ALIGN=LEFT>5' 11&quot; (181 centimeters)</TD>
+<TD DIR=LTR ALIGN=LEFT>146.7 pounds (66.7 kilograms)</TD>
+<TD DIR=LTR ALIGN=LEFT>A+</TD>
+</TR>
+</table>
+
+<script>
+//First Name Search
+function firstNameFunction() 
+{
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("firstNameInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) 
+    {
+        //First Name = 1
+        td = tr[i].getElementsByTagName("td")[1];
+        var td12 = tr[i].getElementsByTagName("td")[1];
+        if (td, td12) 
+        {
+                txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) 
+            {
+                tr[i].style.display = "";
+            } 
+            else 
+            {
+                tr[i].style.display = "none";
+            }
+        } 
+    }
+}
+//Last Name Search
+function lastNameFunction() 
+{
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("lastNameInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) 
+    {
+        //Last Name = 2
+        td = tr[i].getElementsByTagName("td")[2];
+        if (td) 
+        {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) 
+            {
+                tr[i].style.display = "";
+            } 
+            else 
+            {
+                tr[i].style.display = "none";
+            }
+        }       
+    }
+}
+//Blood Type Search
+function bloodTypeFunction() 
+{
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("bloodTypeInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) 
+    {
+        //Blood Type = 12
+        td = tr[i].getElementsByTagName("td")[12];
+        var td1 = tr[i].getElementsByTagName("td")[1];
+        if (td, td1) 
+        {
+            txtValue = td.textContent || td.innerText || td1.textContent || td1.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) 
+            {
+                tr[i].style.display = "";
+            } 
+            else 
+            {
+                tr[i].style.display = "none";
+            }
+        }       
+    }
+}
+</script>  
+</body>
+</html>
+</div>
+
+<!-- References APA 7th Edition -->
+    
+
+<!-- Corban Works, LLC. (2006). Generate a Random Name - Fake Name Generator. Get a whole new identity at the Fake Name Generator. https://www.fakenamegenerator.com/ -->
+    
+<!-- Dixon, & Moe. (2015). HTML Color Codes. HTML Color Codes. https://htmlcolorcodes.com/ -->
+    
+<!-- W3schools. (n.d.). CSS styling tables. W3Schools Online Web Tutorials. https://www.w3schools.com/css/css_table.asp -->
+    
+<!-- W3schools. (n.d.). How to create a filter/Search table. W3Schools Online Web Tutorials. https://www.w3schools.com/howto/howto_js_filter_table.asp -->
+    
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
